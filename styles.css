@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
 
 * {
     height: 100%;
@@ -7,7 +8,7 @@
 }
 
 :root {
-    --heading-font: ;
+    --heading-font: 'Oswald', sans-serif;
     --main-font: 'Roboto', sans-serif;
 }
 
@@ -19,6 +20,7 @@ body {
 header {
     display: flex;
     flex: auto;
+    font-family: var(--heading-font);
     text-align: center;
     justify-content: center;
     align-items: center;
