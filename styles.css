@@ -17,7 +17,11 @@ body {
 }
 
 header {
+    display: flex;
+    flex: auto;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-body {
@@ -29,7 +33,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
-footer > p {  
+footer {  
     display: flex;
     flex: auto;
     align-items: center;
