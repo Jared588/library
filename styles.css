@@ -48,7 +48,6 @@ header {
 
 .book {
     display: grid;
-    grid-template-rows: 4fr 1fr 1fr;
     width: clamp(200px, 50%, 225px);
     height: clamp(300px, 50%, 300px);
     border: 1px solid black;
@@ -57,16 +56,37 @@ header {
     text-align: left;
 }
 
-.book > p {
-    padding-left: 1rem;
-    padding-bottom: 1rem;
+.image-container {
+    display: grid;
 }
 
 #book-icon {
+    grid-row: 2 / 3;
     width: fit-content;
     height: fit-content;
-    padding: 2rem 3.5rem 3.5rem;
+    padding: 0rem 3rem 2rem; 
     opacity: 75%;
+}
+
+#check-button {
+    display: flex;
+    height: 24px;
+    width: 24px;
+    border: none;
+    outline: none;
+    justify-self: right;
+    align-self: center;
+    margin-right: 0.8rem;
+}
+
+.information-container {
+    display: grid;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.information-container > :not(:first-child) {
+    padding-left: 0.1rem;
 }
 
 footer {  
