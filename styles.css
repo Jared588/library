@@ -15,6 +15,7 @@
 body {
     display: grid;
     grid-template-rows: 2fr 10fr 1fr;
+    font-family: var(--main-font);
 }
 
 header {
@@ -30,6 +31,11 @@ header {
     border-bottom: 1px solid rgb(168, 168, 168);
 }
 
+#header-logo {
+    height: 70px;
+    width: 70px;
+}
+
 .main-body {
     font-family: var(--main-font);
 }
@@ -37,6 +43,19 @@ header {
 .book-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 10px;
+    padding: 2rem;
+}
+
+.book {
+    display: grid;
+    grid-template-rows: 4fr 1fr 1fr;
+    width: clamp(200px, 50%, 250px);
+    height: clamp(300px, 50%, 300px);;
+    border: 1px solid black;
+    border-radius: 1rem;
+    overflow: none;
+    text-align: center;
 }
 
 footer {  
