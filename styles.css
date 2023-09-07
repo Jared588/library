@@ -13,7 +13,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 2fr 10fr 1fr;
+    grid-template-rows: 2fr 10fr 50px;
     font-family: var(--main-font);
 }
 
@@ -85,6 +85,18 @@ header {
     height: 1.5rem;
     width: 6.5rem;
     background-color: rgb(230, 180, 88);
+}
+
+#read {
+
+}
+
+#plan-to-read {
+
+}
+
+#dropped {
+
 }
 
 #book-icon {
