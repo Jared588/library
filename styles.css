@@ -53,22 +53,44 @@ header {
 
 .book {
     display: grid;
-    width: clamp(200px, 50%, 200px);
+    width: 200px;
     height: 300px;
     border: 1px solid black;
     border-radius: 1rem;
     text-align: left;
+    overflow: hidden;
+    gap: 5px;
 }
 
 .image-container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -2rem;
+}
+
+.image-container > button {
+    margin-top: 0.5rem;
+    display: flex;
+    height: 2.2rem;
+    align-items: center;
+}
+
+#read-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+    border: 1px black solid;
+    border-radius: 1rem;
+    height: 1.5rem;
+    width: 6.5rem;
+    background-color: rgb(230, 180, 88);
 }
 
 #book-icon {
-    grid-row: 2 / 3;
     width: fit-content;
     height: fit-content;
-    padding: 0rem 3rem 2rem; 
+    padding: 0.4rem 2.5rem 1rem; 
     opacity: 75%;
 }
 
@@ -78,15 +100,17 @@ header {
     width: 24px;
     border: none;
     outline: none;
-    justify-self: right;
-    align-self: center;
+    align-self: flex-end;
     margin-right: 0.8rem;
 }
 
 .information-container {
     display: grid;
-    flex-direction: column;
+    align-content: center;
+    gap: 5px;
     padding-left: 1rem;
+    background-color: rgb(212, 212, 212);
+    border-top: 1px rgb(160, 160, 160) solid;
 }
 
 .information-container > :not(:first-child) {
