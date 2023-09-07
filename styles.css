@@ -117,6 +117,12 @@ header {
     padding-left: 0.1rem;
 }
 
+.information-container > :nth-child(3) {
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 14px;
+}
+
 footer {  
     display: flex;
     grid-row: 3 / -1;
