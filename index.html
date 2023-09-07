@@ -10,8 +10,38 @@
 <body>
     <header>
         <div><img src="icons/bookshelf.svg" alt="bookshelf icon" id="header-logo">My Library</div>
+
         <button id="add-button">+ add to library</button>
+
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <span class="close" id="closeButton">&times;</span>
+                <form id="myForm">
+                    <!-- Fields -->
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author"><br><br>
+
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title"><br><br>
+
+                    <label for="pages">Pages:</label>
+                    <input type="number" id="pages" name="pages"><br><br>
+
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        <option value="select" disabled>Select</option>
+                        <option value="completed">Completed</option>
+                        <option value="plan-to-read">Plan to Read</option>
+                        <option value="currently-reading">Currently Reading</option>
+                        <option value="dropped">Dropped</option>
+                    </select>
+    
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
     </header>
+
     <div class="main-body">
         <div class="book-container">
             <div class="book">
