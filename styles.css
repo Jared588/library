@@ -7,7 +7,8 @@
 }
 
 :root {
-    --heading-font: 'Oswald', sans-serif;
+    --header-font: 'Oswald', sans-serif;
+    --header-color: rgb(207, 207, 207);
     --main-font: 'Roboto', sans-serif;
 }
 
@@ -20,19 +21,40 @@ body {
 header {
     display: flex;
     flex: auto;
-    font-family: var(--heading-font);
+    font-family: var(--header-font);
     font-size: 42px;
-    background-color: rgb(207, 207, 207);
+    background-color: var(--header-color);
     text-align: center;
     padding-left: 3rem;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgb(168, 168, 168);
+}
+
+header > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #header-logo {
     height: 70px;
     width: 70px;
+}
+
+#add-button {
+    border: none;
+    font-size: 24px;
+    background-color: var(--header-color);
+    margin-right: 2rem;
+    cursor: pointer;
+    height: fit-content;
+    transition: transform 0.3s ease;
+}
+
+#add-button:hover {
+    color: rgb(53, 53, 53);
+    transform: scale(1.05);
 }
 
 .main-body {
