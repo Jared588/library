@@ -36,26 +36,27 @@ header {
 }
 
 .main-body {
+    height: fit-content;
     font-family: var(--main-font);
+    grid-row: 2 / 3; 
 }
 
 .book-container {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(320px, 1fr)); 
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
     padding: 2rem;
 }
 
 .book {
     display: grid;
-    width: clamp(200px, 50%, 225px);
-    height: clamp(300px, 50%, 300px);
+    width: clamp(200px, 50%, 200px);
+    height: 300px;
     border: 1px solid black;
     border-radius: 1rem;
-    overflow: none;
     text-align: left;
 }
 
@@ -94,7 +95,8 @@ header {
 
 footer {  
     display: flex;
-    flex: auto;
+    grid-row: 3 / -1;
+    height: 50px;
     font-family: var(--main-font);
     align-items: center;
     justify-content: center;
