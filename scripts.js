@@ -71,6 +71,18 @@ document.addEventListener("DOMContentLoaded", function() {
             const readToggleButton = document.createElement("button");
             readToggleButton.id = "read-toggle";
             readToggleButton.textContent = book.status;
+            if (book.status === "Completed") {
+                readToggleButton.classList.add("read")
+            }
+            if (book.status === "Plan-to-read") {
+                readToggleButton.classList.add("plan-to-read")
+            }
+            if (book.status === "Currently-reading") {
+                readToggleButton.classList.add("reading")
+            }
+            if (book.status === "Dropped") {
+                readToggleButton.classList.add("dropped")
+            }
 
             // Create the book icon image
             const bookIconImg = document.createElement("img");

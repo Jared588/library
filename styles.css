@@ -109,20 +109,23 @@ header > div {
     border: 1px black solid;
     border-radius: 1rem;
     height: 1.5rem;
-    width: 6.5rem;
+    width: 8rem;
+}
+
+.read {
+    background-color: rgb(104, 240, 86);
+}
+
+.reading {
+    background-color: rgb(70, 172, 219);
+}
+
+.plan-to-read {
     background-color: rgb(230, 180, 88);
 }
 
-#read {
-
-}
-
-#plan-to-read {
-
-}
-
-#dropped {
-
+.dropped {
+    background-color: rgb(212, 100, 100);
 }
 
 #book-icon {
