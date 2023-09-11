@@ -97,6 +97,10 @@ header > div {
     align-items: center;
 }
 
+#author {
+    font-weight: bold;
+}
+
 #read-toggle {
     display: flex;
     justify-content: center;
@@ -128,7 +132,7 @@ header > div {
     opacity: 75%;
 }
 
-#check-button {
+#delete {
     display: flex;
     height: 24px;
     width: 24px;
