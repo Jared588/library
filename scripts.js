@@ -47,8 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         addBookToLibrary(author, title, pages, status);
         modal.style.display = "none";
-        console.log(myLibrary);
-        console.log("test");
         updateLibrary();
     }
 
@@ -84,6 +82,11 @@ document.addEventListener("DOMContentLoaded", function() {
             if (book.status === "Dropped") {
                 readToggleButton.classList.add("dropped")
             }
+
+            readToggleButton.setAttribute("status-index", index);
+            readToggleButton.addEventListener("click", () => {
+                changeStatus(readToggleButton.getAttribute("status-index"));
+            });
 
             // Create the book icon image
             const bookIconImg = document.createElement("img");
@@ -138,6 +141,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function removeEntry(index) {     
         myLibrary.splice(index, 1); // Remove the book from the array
+        updateLibrary(); // Update the library display
+    }
+
+    function changeStatus(index) {
+        if (myLibrary[index].status === "Completed") {
+            myLibrary[index].status = "Plan-to-read";
+        } else if (myLibrary[index].status === "Plan-to-read") {
+            myLibrary[index].status = "Currently-reading";
+        } else if (myLibrary[index].status === "Currently-reading") {
+            myLibrary[index].status = "Dropped";
+        } else if (myLibrary[index].status === "Dropped") {
+            myLibrary[index].status = "Completed";
+        }
         updateLibrary(); // Update the library display
     }
 });

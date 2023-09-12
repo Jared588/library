@@ -110,6 +110,7 @@ header > div {
     border-radius: 1rem;
     height: 1.5rem;
     width: 8rem;
+    cursor: pointer;
 }
 
 .read {
