@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Display all books in library
     function updateLibrary() {
-        let booknum = 0;
+        let index = 0;
         const bookContainer = document.querySelector(".book-container");
         bookContainer.innerHTML = "";
 
@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Create a new div element with the class "book"
             const bookDiv = document.createElement("div");
             bookDiv.className = "book";
+            bookDiv.setAttribute("data-index", index);
 
             // Create the image container div
             const imageContainerDiv = document.createElement("div");
@@ -93,6 +94,10 @@ document.addEventListener("DOMContentLoaded", function() {
             // Create the "Delete" button
             const deleteButton = document.createElement("button");
             deleteButton.id = "delete";
+            deleteButton.setAttribute("button-index", index);
+            deleteButton.addEventListener("click", () => {
+                removeEntry(deleteButton.getAttribute("button-index"));
+            })
             const deleteButtonImg = document.createElement("img");
             deleteButtonImg.src = "icons/delete-outline.svg";
             deleteButtonImg.alt = "trash can";
@@ -127,6 +132,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Finally, append the entire "book" div to the document body (or another desired location)
             bookContainer.appendChild(bookDiv);
+            index++;
         }
     }  
+
+    function removeEntry(index) {     
+        myLibrary.splice(index, 1); // Remove the book from the array
+        updateLibrary(); // Update the library display
+    }
 });
